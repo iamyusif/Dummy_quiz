@@ -4,22 +4,30 @@ import 'package:quiz/models/quiz_Questions.dart';
 const questions = [
   QuizQuestions(
     'What is the capital of France?',
-    ['Berlin', 'Buenos Aires', 'Paris', 'San Juan'],
+    ['Paris', 'Berlin', 'Buenos Aires', 'San Juan'],
   ),
   QuizQuestions(
     'Who is CEO of Tesla?',
-    ['Jeff Bezos', 'Elon Musk', 'Bill Gates', 'Tony Stark'],
+    ['Elon Musk', 'Jeff Bezos', 'Bill Gates', 'Tony Stark'],
   ),
   QuizQuestions(
     'The iPhone was created by which company?',
     ['Apple', 'Intel', 'Amazon', 'Microsoft'],
   ),
   QuizQuestions(
-    'How many Harry Potter books are there?',
-    ['1', '4', '6', '7'],
+    'What is the capital of India?',
+    ['Delhi', 'Mumbai', 'Kolkata', 'Chennai'],
   ),
   QuizQuestions(
-    'What is the capital of France?',
-    ['Berlin', 'Buenos Aires', 'Paris', 'San Juan'],
+    'What is the capital of Australia?',
+    ['Canberra', 'Sydney', 'Melbourne', 'Perth'],
+  ),
+  QuizQuestions(
+    'What is the capital of Canada?',
+    ['Ottawa', 'Toronto', 'Vancouver', 'Montreal'],
+  ),
+  QuizQuestions(
+    'What is the capital of China?',
+    ['Pekin', 'Beijing', 'Hong Kong', 'Macau'],
   ),
 ];

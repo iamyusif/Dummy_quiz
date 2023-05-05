@@ -14,10 +14,10 @@ class HelloScreenApp extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Opacity(
-            opacity: 0.7,
+            opacity: 0.8,
             child: Container(
-              width: 300,
-              height: 300,
+              width: 400,
+              height: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/q.png'),
@@ -26,8 +26,7 @@ class HelloScreenApp extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 50),
-          const Texts("Start the game to test yourself", 28, Colors.lightGreenAccent, TextAlign.center),
+          const Texts("Start the game to test yourself", 35, Colors.lightGreenAccent, TextAlign.center),
           const SizedBox(height: 20),
           OutlinedButton.icon(
             style: OutlinedButton.styleFrom(

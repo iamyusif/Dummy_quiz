@@ -4,7 +4,9 @@ import 'package:quiz/widgets/texts.dart';
 import 'data/questions.dart';
 
 class Questions extends StatefulWidget {
-  const Questions({super.key});
+  const Questions({super.key, required this.onAnswerSelected});
+
+  final void Function(String answer) onAnswerSelected;
 
   @override
   State<Questions> createState() => _QuestionsState();
@@ -13,7 +15,9 @@ class Questions extends StatefulWidget {
 class _QuestionsState extends State<Questions> {
   var currentQuestionIndex = 0;
 
-  void answerQuestion() {
+  void answerQuestion(String selectedAnswer) {
+    widget.onAnswerSelected(selectedAnswer);
+
     setState(() {
       currentQuestionIndex++;
     });
@@ -30,13 +34,18 @@ class _QuestionsState extends State<Questions> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Texts(currentQuestion.text, 25, Colors.white, TextAlign.center),
+            const Image(
+              image: AssetImage('assets/images/q.png'),
+              height: 200,
+            ),
+            Texts(currentQuestion.text, 25, Colors.lightGreenAccent,
+                TextAlign.center),
             const SizedBox(
               height: 20,
             ),
             ...currentQuestion.getShuffledAnswers().map((answer) {
-              return GroupButton(answerText: answer, onTapped: answerQuestion);
-
+              return GroupButton(answerText: answer,
+                  onTapped:  () => answerQuestion(answer));
             }),
           ],
         ),

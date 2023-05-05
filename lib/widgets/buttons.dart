@@ -17,7 +17,7 @@ class _GroupButtonState extends State<GroupButton> {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.white,
-          backgroundColor: Colors.indigo,
+          backgroundColor: Colors.lightGreen,
           minimumSize: const Size(150, 40),
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
